@@ -1,7 +1,11 @@
-export default function Home() {
+import React from "react";
+
+export default function HomePage() {
   return (
-    <h1 className="text-9xl font-bold underline text-amber-300">
-      Hello world!
-    </h1>
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <div className="w-full">
+        <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+      </div>
+      </React.Suspense>
   )
 }
