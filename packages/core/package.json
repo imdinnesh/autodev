@@ -1,19 +1,28 @@
 {
-  "name": "@repo/shared",
+  "name": "@repo/core",
   "version": "1.0.0",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
-  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "echo 'No build needed for types'"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.15.3",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
     "eslint": "^9.34.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
     "typescript": "5.9.2"
   },
   "keywords": [],
