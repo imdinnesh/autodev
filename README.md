@@ -1,6 +1,23 @@
-# AUTODEV - AI Powered Asyncronous Coding Agent
-
-packages/shared-types:(Contract) Shared TypeScript types for AUTODEV monorepo.
-packages/agent-core:(Brain) Core logic
-apps/agent-server: (Host) Server to manage agents and tasks.
-apps/web: (UI) Next.js web application for user interaction. 
+root/
+├── apps/
+│   ├── web/               # Next.js UI
+│   ├── docs/              # Documentation site
+│   └── api/               # Fastify API
+│
+├── packages/
+│   ├── agent/             # Core coding agent runtime
+│   ├── embeddings/        # Embedding generator + vector client
+│   ├── git/               # Git utilities
+│   ├── queue/             # BullMQ wrapper
+│   ├── llm/               # Unified LLM interface
+│   ├── diff/              # Apply patches, generate diffs
+│   ├── shared/            # Types & constants
+│   └── utils/             # Common helpers
+│
+├── infra/
+│   ├── postgres/
+│   ├── redis/
+│   ├── qdrant/
+│   └── docker-compose.yml
+│
+└── turbo.json
