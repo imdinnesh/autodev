@@ -1,0 +1,22 @@
+services:
+  postgres:
+
+    image: postgres:latest
+    container_name: drizzle-postgres
+    restart: unless-stopped
+  
+    environment:
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: mypassword 
+      POSTGRES_DB: mydatabase 
+      
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:latest
+    container_name: drizzle-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]

@@ -1,1 +1,1 @@
-{"root":["./src/index.ts"],"version":"5.9.2"}
+{"root":["./src/index.ts","./src/config/bullmq.ts","./src/controller/task.controller.ts","./src/db/drizzle.ts","./src/db/schema.ts","./src/lib/logger.ts","./src/lib/redis.ts","./src/lib/sse.ts","./src/middlewares/error.middleware.ts","./src/queues/agent.queue.ts","./src/routes/health.route.ts","./src/routes/logs.route.ts","./src/routes/task.route.ts","./src/types/index.ts"],"version":"5.9.2"}
